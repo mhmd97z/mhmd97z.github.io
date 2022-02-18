@@ -8,6 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-Hello world!
-
 **My public-key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGv/uLKt6D/hUcgzKjhtb2JkSgMyBVCunJFjY5G3YaUG**
+
+Hello world!
