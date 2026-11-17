@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammad Zangooei | University of Waterloo</title>
+  <meta name="description"
+    content="Mohammad Zangooei, Ph.D. Candidate in Computer Science at the University of Waterloo. Research on Multi-Agent Reinforcement Learning, Verifiable RL, Next-Generation Wireless Systems, and Applied AI.">
+  <meta name="keywords"
+    content="Mohammad Zangooei, University of Waterloo, Applied AI Research, Multi-Agent Reinforcement Learning, Verifiable RL, Open RAN, LLM Judges, Systems and Networking">
+  <meta name="author" content="Mohammad Zangooei">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Mohammad Zangooei | Ph.D. Candidate @ University of Waterloo">
+  <meta property="og:description"
+    content="Applied AI & Systems Researcher: Multi-Agent Decision-Making, Verifiable RL, Wireless Systems, and Small Language Model Post-Training.">
+  <meta property="og:url" content="https://mhmd97z.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mhmd97z.github.io/assets/img/profile.jpg">
+  <link rel="canonical" href="https://mhmd97z.github.io/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Prevent flash of unstyled theme -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammad Zangooei",
+    "url": "https://mhmd97z.github.io/",
+    "jobTitle": "Ph.D. Candidate in Computer Science",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Waterloo"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Sharif University of Technology"
+    },
+    "sameAs": [
+      "https://scholar.google.com/citations?user=iXMLe5YAAAAJ&hl=en",
+      "https://github.com/mhmd97z",
+      "https://www.linkedin.com/in/mohammad-zangooei-2749b3129/"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Top Sticky Navigation -->
+    <header class="site-nav">
+      <div class="container nav-inner">
+        <a class="nav-brand" href="#about">Mohammad Zangooei</a>
+        <div class="nav-right">
+          <nav aria-label="Primary navigation">
+            <ul class="nav-links">
+              <li><a href="#about" class="active">About</a></li>
+              <li><a href="#research">Research</a></li>
+              <!-- <li><a href="#news">News</a></li> -->
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#publications">Publications</a></li>
+              <li><a href="#education">Education</a></li>
+              <!-- Optional CV link: uncomment once hosting a public CV PDF -->
+              <!-- <li><a href="assets/pdf/cv.pdf" target="_blank" rel="noopener">CV</a></li> -->
+            </ul>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false"
+            title="Toggle light/dark theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Two-Column Grid -->
+    <div class="container main-grid">
+      <!-- Sticky Profile Sidebar -->
+      <aside class="sidebar" aria-label="Author profile">
+        <div class="avatar-wrap">
+          <img class="profile-picture" src="assets/img/profile.jpg" width="400" height="380" alt="Mohammad Zangooei">
+        </div>
+        <div class="author-meta">
+          <h1 class="author-name">Mohammad Zangooei</h1>
+          <p class="author-role">Ph.D. Candidate</p>
+          <p class="author-affil">David R. Cheriton School of Computer Science<br>University of Waterloo</p>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Waterloo, ON, Canada</span>
+          </li>
+          <li>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <button type="button" class="email-copy-btn mono" id="copy-email" data-email="mzangooei@uwaterloo.ca"
+              title="Click to copy email address">
+              <span>mzangooei@uwaterloo.ca</span>
+              <span class="copy-toast" id="email-toast">Copied</span>
+            </button>
+          </li>
+          <li>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z">
+              </path>
+            </svg>
+            <a href="https://scholar.google.com/citations?user=iXMLe5YAAAAJ&amp;hl=en" target="_blank"
+              rel="noopener">Google Scholar</a>
+          </li>
+          <li>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z">
+              </path>
+            </svg>
+            <a href="https://github.com/mhmd97z" target="_blank" rel="noopener">GitHub (@mhmd97z)</a>
+          </li>
+          <li>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.064 2.064 0 1 1 0-4.128 2.064 2.064 0 0 1 0 4.128zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+              </path>
+            </svg>
+            <a href="https://www.linkedin.com/in/mohammad-zangooei-2749b3129/" target="_blank"
+              rel="noopener">LinkedIn</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Right Column -->
+      <main class="content">
+        <!-- 1. About Me -->
+        <section id="about" class="prose">
+          <h2>About Me</h2>
+          <p>
+            I am a Ph.D. Candidate at the <a href="https://cs.uwaterloo.ca/" target="_blank" rel="noopener">David R.
+              Cheriton School of Computer Science</a>, University of Waterloo (expected completion: Winter 2027). I am
+            fortunate to work with Professor <a href="https://rboutaba.cs.uwaterloo.ca/" target="_blank"
+              rel="noopener">Raouf Boutaba</a> (supervisor), Professor <a href="https://mina.arashloo.net/"
+              target="_blank" rel="noopener">Mina Tahmasbi Arashloo</a>, and Professor <a
+              href="https://sunbo-online.github.io/" target="_blank" rel="noopener">Bo Sun</a>. My research lies at the
+            intersection of
+            <strong>applied artificial intelligence</strong>, <strong>trustworthy decision-making under
+              constraints</strong>, and <strong>networked systems</strong>.
+          </p>
+          <p>
+            Alongside my doctoral research, which has included an NSERC/MITACS collaboration with <strong>Rogers
+              Communications</strong>, I have worked in industry research labs as a
+            Research Intern at <strong>Huawei Cloud R&amp;D</strong> (Markham, Canada) on post-training small language
+            model judges and enterprise data agents, and at <strong>Nokia Bell Labs</strong> (Paris, France) on graph
+            neural multi-agent reinforcement learning.
+          </p>
+          <p>
+            Prior to joining Waterloo, I received my B.Sc. in Electrical Engineering with a minor in Computer Science
+            from <a href="https://en.sharif.ir/" target="_blank" rel="noopener">Sharif University of Technology</a>,
+            where I ranked in the top 10% of my graduating cohort and was a member of Iran's National Elite Foundation.
+          </p>
+        </section>
+
+        <!-- 2. Research Overview -->
+        <section id="research">
+          <h2>Research Overview</h2>
+          <p class="research-intro prose">
+            My work focuses on building <strong>scalable, verifiable, and generalizable learning and optimization
+              algorithms</strong> that can be safely deployed in real-world infrastructure and agentic workflows:
+          </p>
+          <div class="research-pillars">
+            <div class="pillar-card">
+              <div class="pillar-title">
+                <span>LLM-Driven Heuristic Discovery for Systems</span>
+                <span class="pillar-venues">Preprint ’26</span>
+              </div>
+              <p class="pillar-desc">
+                Studying how large language models can synthesize and evolve control policies for networked systems,
+                with a focus on mitigating search-time overfitting so discovered heuristics generalize reliably to
+                unseen operating workloads.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-title">
+                <span>Small Language Model Post-Training &amp; Enterprise Data Agents</span>
+                <span class="pillar-venues">NeurIPS WS ’26 · Huawei Cloud R&amp;D</span>
+              </div>
+              <p class="pillar-desc">
+                Sharpening decision boundaries of compact pointwise LLM judges via counterfactual pairwise augmentation
+                (CPA) and building context layers for enterprise
+                data agents.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-title">
+                <span>Multi-Agent Learning &amp; Stochastic Optimization in Wireless Systems</span>
+                <span class="pillar-venues">IEEE JSAC ’24 · IEEE NOMS ’26 · Preprint ’26</span>
+              </div>
+              <p class="pillar-desc">
+                Designing constrained multi-agent RL (CMARS), distributed graph-neural coordination (APS-GNN), and
+                bi-level stochastic optimization (HyRA) for 5G/6G Open RAN slicing and Cell-Free Massive MIMO under
+                strict SLA and latency budgets.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-title">
+                <span>Verifiable &amp; Reliable Reinforcement Learning for Systems</span>
+                <span class="pillar-venues">ACM SIGMETRICS ’26 · ICML WS ’23</span>
+              </div>
+              <p class="pillar-desc">
+                Formulating and decomposing relational <em>symbolic properties</em>, such as monotonicity and
+                perturbation robustness, over continuous state ranges so neural verification engines can audit deep RL
+                controllers in adaptive video streaming, congestion control, and resource allocation.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. News / Updates (commented out)
+        <section id="news">
+          <h2>News</h2>
+          <div class="news-list">
+            <div class="news-item">
+              <span class="news-date">Oct 2026</span>
+              <span class="news-text">Our paper on <em>Counterfactual Pairwise Augmentation for Small Pointwise LLM
+                  Judges</em> was accepted to the <strong>NeurIPS ’26 Workshop on SLMs for Agentic
+                  Systems</strong>.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">May 2026</span>
+              <span class="news-text">Started as a Research Intern at <strong>Huawei Cloud R&amp;D</strong> in Markham,
+                Canada, working on LLM judge fine-tuning and enterprise data agents.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Apr 2026</span>
+              <span class="news-text">Our paper <em>Analyzing Symbolic Properties for DRL Agents in Systems and
+                  Networking</em> (<strong>diffRL</strong>) was accepted to <strong>ACM SIGMETRICS 2026</strong>.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Feb 2026</span>
+              <span class="news-text">Our paper <em>HyRA: A Hybrid Resource Allocation Framework for RAN Slicing</em>
+                was accepted to <strong>IEEE/IFIP NOMS 2026</strong>.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Oct 2024</span>
+              <span class="news-text">Joined <strong>Nokia Bell Labs</strong> in Paris, France for a one-year research
+                internship on graph neural MARL for Cell-Free Massive MIMO.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Feb 2024</span>
+              <span class="news-text">Our paper on constrained multi-agent RL for flexible Open RAN slicing appeared in
+                the <strong>IEEE JSAC Special Issue on Open RAN</strong>.</span>
+            </div>
+          </div>
+        </section>
+        -->
+
+        <!-- 4. Research & Technical Experience -->
+        <section id="experience">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-logo-wrap">
+                <img class="timeline-logo" src="assets/img/logos/huawei.svg" width="30" height="30" alt=""
+                  aria-hidden="true">
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-top">
+                  <span class="timeline-org">Huawei Cloud R&amp;D</span>
+                  <span class="timeline-loc">Markham, ON, Canada</span>
+                </div>
+                <div class="timeline-sub">
+                  <span class="timeline-role">Research Intern (Applied AI)</span>
+                  <span class="timeline-date">May 2026 – Dec. 2026</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Proposed judge LLM fine-tuning with counterfactual pairwise augmentation, outperforming
+                    multi-expert model merging across evaluation criteria.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-logo-wrap">
+                <img class="timeline-logo" src="assets/img/logos/uwaterloo.svg" width="30" height="30" alt=""
+                  aria-hidden="true">
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-top">
+                  <span class="timeline-org">University of Waterloo</span>
+                  <span class="timeline-loc">Waterloo, ON, Canada</span>
+                </div>
+                <div class="timeline-sub">
+                  <span class="timeline-role">Ph.D. Candidate (NSERC/MITACS/Rogers Comm.)</span>
+                  <span class="timeline-date">Sept. 2021 – Winter 2027 (Expected)</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Proposed a representative evaluation harness for LLM-based heuristic discovery, mitigating
+                    search-time overfitting and achieving robust generalization across unseen workloads.</li>
+                  <li>Proposed formal verification methods for symbolic property checking across continuous input state
+                    ranges in deep RL policies.</li>
+                  <li>Proposed a constrained Multi-Agent RL resource allocation algorithm for Open RAN slicing,
+                    improving SLA satisfaction by 50%.</li>
+                  <li>Proposed a hybrid resource allocation framework combining per-slice reservation and shared
+                    pooling, achieving up to 75% spectrum savings under an optimal bi-level stochastic optimization
+                    formulation.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-logo-wrap timeline-logo-wide">
+                <img class="timeline-logo" src="assets/img/logos/nokia-bell-labs.svg" width="34" height="34" alt=""
+                  aria-hidden="true">
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-top">
+                  <span class="timeline-org">Nokia Bell Labs</span>
+                  <span class="timeline-loc">Paris, France</span>
+                </div>
+                <div class="timeline-sub">
+                  <span class="timeline-role">Research Intern</span>
+                  <span class="timeline-date">Oct. 2024 – Sept. 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Proposed a Graph Neural Network (GNN)-based multi-agent RL framework for distributed wireless
+                    connectivity management, improving SLA satisfaction by 40%.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-logo-wrap timeline-logo-compact">
+                <img class="timeline-logo" src="assets/img/logos/tapsi.svg" width="26" height="26" alt=""
+                  aria-hidden="true">
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-top">
+                  <span class="timeline-org">TAPSI Co.</span>
+                  <span class="timeline-loc">Tehran, Iran</span>
+                </div>
+                <div class="timeline-sub">
+                  <span class="timeline-role">Data Analyst (Pricing, Mapping, and Dispatch Systems)</span>
+                  <span class="timeline-date">Feb. 2021 – Sept. 2021</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Developed large-scale Apache Spark data pipelines to analyze rider and driver experience across
+                    25M riders and 1M drivers.</li>
+                  <li>Designed and deployed A/B testing frameworks to evaluate marketplace pricing and dispatch product
+                    features.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Publications -->
+        <section id="publications">
+          <div class="section-header">
+            <h2>Publications</h2>
+            <div class="pub-filters" role="group" aria-label="Filter publications">
+              <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All
+                (9)</button>
+              <button type="button" class="filter-btn" data-filter="first" aria-pressed="false">First-Author
+                (7)</button>
+            </div>
+          </div>
+          <p class="pub-note">Full citation metrics are available on <a
+              href="https://scholar.google.com/citations?user=iXMLe5YAAAAJ&amp;hl=en" target="_blank"
+              rel="noopener">Google Scholar</a>.</p>
+
+          <ol class="pub-list">
+            <!-- Pub 1: CPA NeurIPS Workshop '26 -->
+            <li class="pub-item" data-first-author="true">
+              <div class="pub-badge-col">
+                <span class="venue-badge">NeurIPS WS ’26</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://arxiv.org/abs/2610.41149" target="_blank" rel="noopener">Counterfactual Pairwise
+                    Augmentation Improves Small Pointwise LLM Judges</a>
+                </h3>
+                <p class="pub-authors">
+                  <span class="me">M. Zangooei</span>, P. Teymoori, M. R. Shirzad, S. Shahtalebi
+                </p>
+                <p class="pub-periodical">NeurIPS Workshop on Small Language Models (SLMs) for Agentic Systems, 2026</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://arxiv.org/abs/2610.41149" target="_blank" rel="noopener">arXiv</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Pub 2: diffRL SIGMETRICS '26 -->
+            <li class="pub-item" data-first-author="true">
+              <div class="pub-badge-col">
+                <span class="venue-badge">ACM SIGMETRICS ’26</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://doi.org/10.1145/3805627" target="_blank" rel="noopener">Analyzing Symbolic Properties
+                    for DRL Agents in Systems and Networking</a>
+                </h3>
+                <p class="pub-authors">
+                  <span class="me">M. Zangooei</span>, J. Weil, A. Rizk, M. Tahmasbi Arashloo, R. Boutaba
+                </p>
+                <p class="pub-periodical">ACM SIGMETRICS, 2026</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://doi.org/10.1145/3805627" target="_blank" rel="noopener">Paper</a>
+                  <a class="pub-btn" href="https://arxiv.org/abs/2604.04914" target="_blank" rel="noopener">arXiv</a>
+                  <a class="pub-btn" href="https://github.com/mhmd97z/diffRL" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Pub 3: HyRA IEEE NOMS '26 -->
+            <li class="pub-item" data-first-author="true">
+              <div class="pub-badge-col">
+                <span class="venue-badge">IEEE NOMS ’26</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/11668346" target="_blank" rel="noopener">HyRA:
+                    A Hybrid Resource
+                    Allocation Framework for RAN Slicing based on Bi-level Stochastic Optimization</a>
+                </h3>
+                <p class="pub-authors">
+                  <span class="me">M. Zangooei</span>, B. Sun, N. Limam, R. Boutaba
+                </p>
+                <p class="pub-periodical">IEEE/IFIP Network Operations and Management Symposium (NOMS), 2026</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://ieeexplore.ieee.org/abstract/document/11668346" target="_blank"
+                    rel="noopener">Paper</a>
+                  <a class="pub-btn" href="https://arxiv.org/abs/2602.16952" target="_blank" rel="noopener">arXiv</a>
+                  <a class="pub-btn" href="https://github.com/mhmd97z/hyra" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Pub 4: APS-GNN Preprint '26 -->
+            <li class="pub-item" data-first-author="true">
+              <div class="pub-badge-col">
+                <span class="venue-badge">Preprint ’26</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://arxiv.org/abs/2602.17954" target="_blank" rel="noopener">Graph-Neural Multi-Agent
+                    Coordination for Distributed Access-Point Selection in Cell-Free Massive MIMO</a>
+                </h3>
+                <p class="pub-authors">
+                  <span class="me">M. Zangooei</span>, L. Salaün, C. S. Chen, R. Boutaba
+                </p>
+                <p class="pub-periodical">arXiv Preprint (Under Review), 2026</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://arxiv.org/abs/2602.17954" target="_blank" rel="noopener">arXiv</a>
+                  <a class="pub-btn" href="https://github.com/mhmd97z/aps-gnn" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Pub 5: CMARS IEEE JSAC '24 -->
+            <li class="pub-item" data-first-author="true">
+              <div class="pub-badge-col">
+                <span class="venue-badge">IEEE JSAC ’24</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://ieeexplore.ieee.org/document/10329913" target="_blank" rel="noopener">Flexible RAN
+                    Slicing in Open RAN with Constrained Multi-Agent Reinforcement Learning</a>
+                </h3>
+                <p class="pub-authors">
+                  <span class="me">M. Zangooei</span>, M. Golkarifard, M. Rouili, N. Saha, R. Boutaba
+                </p>
+                <p class="pub-periodical">IEEE Journal on Selected Areas in Communications (JSAC), 2024</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://ieeexplore.ieee.org/document/10329913" target="_blank"
+                    rel="noopener">Paper</a>
+                  <a class="pub-btn" href="https://github.com/mhmd97z/ran-slicing-marl" target="_blank"
+                    rel="noopener">Code</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Pub 6: 5G SA Testbeds IEEE NOMS '24 (Co-authored) -->
+            <li class="pub-item" data-first-author="false">
+              <div class="pub-badge-col">
+                <span class="venue-badge">IEEE NOMS ’24</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://doi.org/10.1109/NOMS59830.2024.10575687" target="_blank" rel="noopener">Evaluating
+                    Open-Source 5G SA Testbeds: Unveiling Performance Disparities in RAN Scenarios</a>
+                </h3>
+                <p class="pub-authors">
+                  M. Rouili, N. Saha, M. Golkarifard, <span class="me">M. Zangooei</span>, R. Boutaba, E. Onur, A. Saleh
+                </p>
+                <p class="pub-periodical">IEEE/IFIP Network Operations and Management Symposium (NOMS), 2024</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://doi.org/10.1109/NOMS59830.2024.10575687" target="_blank"
+                    rel="noopener">Paper</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Pub 7: ICML Workshop '23 -->
+            <li class="pub-item" data-first-author="true">
+              <div class="pub-badge-col">
+                <span class="venue-badge">ICML WS ’23</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://files.sri.inf.ethz.ch/wfvml23/papers/paper_20.pdf" target="_blank"
+                    rel="noopener">Towards Verifying Monotonicity and Robustness Properties for Domain-Specific DRL
+                    Algorithms</a>
+                </h3>
+                <p class="pub-authors">
+                  <span class="me">M. Zangooei</span>, M. Tahmasbi Arashloo, R. Boutaba
+                </p>
+                <p class="pub-periodical">ICML Workshop on Formal Verification of Machine Learning, 2023</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://files.sri.inf.ethz.ch/wfvml23/papers/paper_20.pdf" target="_blank"
+                    rel="noopener">Paper</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Pub 8: RL for RRM Survey CommMag '23 -->
+            <li class="pub-item" data-first-author="true">
+              <div class="pub-badge-col">
+                <span class="venue-badge">CommMag ’23</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10004901" target="_blank"
+                    rel="noopener">Reinforcement Learning for Radio Resource Management in RAN Slicing: A Survey</a>
+                </h3>
+                <p class="pub-authors">
+                  <span class="me">M. Zangooei</span>, N. Saha, M. Golkarifard, R. Boutaba
+                </p>
+                <p class="pub-periodical">IEEE Communications Magazine, 2023</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://ieeexplore.ieee.org/abstract/document/10004901" target="_blank"
+                    rel="noopener">Paper</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Pub 9: Slice Scaling Survey CommMag '23 (Co-authored) -->
+            <li class="pub-item" data-first-author="false">
+              <div class="pub-badge-col">
+                <span class="venue-badge">CommMag ’23</span>
+              </div>
+              <div class="pub-body">
+                <h3 class="pub-title">
+                  <a href="https://doi.org/10.1109/MCOM.006.2200534" target="_blank" rel="noopener">Deep Reinforcement
+                    Learning Approaches to Network Slice Scaling and Placement: A Survey</a>
+                </h3>
+                <p class="pub-authors">
+                  N. Saha, <span class="me">M. Zangooei</span>, M. Golkarifard, R. Boutaba
+                </p>
+                <p class="pub-periodical">IEEE Communications Magazine, 2023</p>
+                <div class="pub-actions">
+                  <a class="pub-btn" href="https://doi.org/10.1109/MCOM.006.2200534" target="_blank"
+                    rel="noopener">Paper</a>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 6. Education -->
+        <section id="education">
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-logo-wrap">
+                <img class="timeline-logo" src="assets/img/logos/uwaterloo.svg" width="30" height="30" alt=""
+                  aria-hidden="true">
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-top">
+                  <span class="timeline-org">University of Waterloo</span>
+                  <span class="timeline-loc">Waterloo, ON, Canada</span>
+                </div>
+                <div class="timeline-sub">
+                  <span class="timeline-role">Direct Ph.D. in Computer Science, David R. Cheriton School of Computer
+                    Science</span>
+                  <span class="timeline-date">Sept. 2021 – Winter 2027 (Expected)</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li><strong>Advisor:</strong> Prof. Raouf Boutaba &nbsp;·&nbsp; <strong>GPA:</strong> 95.75 / 100</li>
+                  <li><strong>Research Focus:</strong> Multi-Agent Decision-Making, Verifiable RL, and Learning-Driven
+                    Optimization in Networked Systems.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-logo-wrap">
+                <img class="timeline-logo" src="assets/img/logos/sharif.svg" width="30" height="30" alt=""
+                  aria-hidden="true">
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-top">
+                  <span class="timeline-org">Sharif University of Technology</span>
+                  <span class="timeline-loc">Tehran, Iran</span>
+                </div>
+                <div class="timeline-sub">
+                  <span class="timeline-role">B.Sc. in Electrical Engineering (Minor in Computer Science)</span>
+                  <span class="timeline-date">Sept. 2016 – Feb. 2021</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li><strong>GPA:</strong> 18.71 / 20 &nbsp;·&nbsp; Ranked <strong>15th among 162</strong> students in
+                    the cohort.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <span>&copy; 2026 Mohammad Zangooei</span>
+          <span>Last updated November 2026</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js?v=2"></script>
+</body>
+
+</html>

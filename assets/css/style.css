@@ -1,0 +1,949 @@
+/* ==========================================================================
+   Mohammad Zangooei - Academic Homepage Stylesheet
+   Synthesizing design elements from yifanqiao.com, kyleshu.github.io,
+   and maoziming.github.io (Zero external framework dependencies)
+   ========================================================================== */
+
+/* 1. Theme Tokens (Light & Dark) */
+:root {
+  --primary: #0f3d6e;
+  --primary-strong: #092849;
+  --primary-soft: rgba(15, 61, 110, 0.075);
+  --accent-gold: #c98a00;
+
+  --link: #0b57a4;
+  --link-hover: #07396e;
+
+  --text-primary: #111827;
+  --text-body: #334155;
+  --text-muted: #64748b;
+
+  --bg-page: #ffffff;
+  --bg-top-wash: #f8fafc;
+  --bg-subtle: #f8fafc;
+  --bg-elevated: #ffffff;
+  --bg-nav: rgba(255, 255, 255, 0.88);
+  --bg-code: #f1f5f9;
+
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  /* Venue Badge (Unified Blue - Light) */
+  --badge-bg: #eff6ff;
+  --badge-fg: #1d4ed8;
+  --badge-border: #bfdbfe;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 10px 26px rgba(15, 61, 110, 0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.24s ease;
+}
+
+[data-theme="dark"] {
+  --primary: #7ab6f5;
+  --primary-strong: #9ecaff;
+  --primary-soft: rgba(122, 182, 245, 0.12);
+  --accent-gold: #fbbf24;
+
+  --link: #7ab6f5;
+  --link-hover: #abd2fc;
+
+  --text-primary: #f1f5f9;
+  --text-body: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --bg-page: #0d1117;
+  --bg-top-wash: #131922;
+  --bg-subtle: #161c24;
+  --bg-elevated: #151b23;
+  --bg-nav: rgba(13, 17, 23, 0.88);
+  --bg-code: #11161d;
+
+  --border: #263040;
+  --border-strong: #374559;
+
+  /* Venue Badge (Unified Blue - Dark) */
+  --badge-bg: rgba(59, 130, 246, 0.14);
+  --badge-fg: #93c5fd;
+  --badge-border: rgba(96, 165, 250, 0.3);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.55);
+}
+
+/* 2. Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.975rem;
+  line-height: 1.66;
+  color: var(--text-body);
+  background-color: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg-top-wash) 0%, var(--bg-page) 340px);
+}
+
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Animated inline links in prose (inspired by yifanqiao.com) */
+.prose a {
+  background-image: linear-gradient(var(--link), var(--link));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--transition-normal), color var(--transition-fast);
+}
+
+.prose a:hover {
+  background-size: 100% 1px;
+}
+
+strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* 3. Top Sticky Navigation Bar */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-nav);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.4rem;
+  gap: 1rem;
+}
+
+.nav-brand {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.nav-brand:hover {
+  color: var(--primary);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.45rem;
+}
+
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0.25rem 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  color: var(--text-body);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+}
+
+.icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .icon-sun {
+  display: block;
+}
+
+/* 4. Two-Column Layout & Sticky Author Sidebar */
+.main-grid {
+  display: grid;
+  grid-template-columns: 238px minmax(0, 1fr);
+  gap: 3.25rem;
+  padding-top: 2.3rem;
+  padding-bottom: 3.5rem;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 4.9rem;
+}
+
+.avatar-wrap {
+  width: 192px;
+  height: 192px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  margin-bottom: 1.15rem;
+  background: var(--bg-subtle);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.avatar-wrap:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.author-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin: 0 0 0.35rem 0;
+  letter-spacing: 0.01em;
+}
+
+.author-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.15rem 0;
+}
+
+.author-affil {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin: 0 0 1.15rem 0;
+  line-height: 1.4;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.9rem 0 0 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.48rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.58rem;
+  font-size: 0.855rem;
+  color: var(--text-body);
+  line-height: 1.35;
+}
+
+.contact-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--primary);
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.email-copy-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-body);
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.email-copy-btn:hover {
+  color: var(--link);
+}
+
+.copy-toast {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.08rem 0.38rem;
+  border-radius: 4px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  pointer-events: none;
+}
+
+.copy-toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 5. Content Sections & Headings */
+.content section {
+  margin-bottom: 2.55rem;
+}
+
+.content section:first-child h2 {
+  margin-top: 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.95rem;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.52rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin: 0 0 0.9rem 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--primary);
+  letter-spacing: 0.01em;
+  scroll-margin-top: 4.7rem;
+}
+
+.section-header h2 {
+  margin-bottom: 0;
+}
+
+.prose p {
+  margin: 0 0 0.88rem 0;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* 6. Research Overview Pillars (maoziming.github.io inspired) */
+.research-intro {
+  margin: 0 0 0.95rem 0;
+}
+
+.research-pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+
+.pillar-card {
+  padding: 0.82rem 1.05rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.pillar-card:hover {
+  border-color: var(--border-strong);
+  border-left-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.pillar-title {
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: var(--text-primary);
+  margin: 0 0 0.35rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.pillar-venues {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.73rem;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--primary-soft);
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+}
+
+.pillar-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-body);
+}
+
+/* 7. News / Updates Table (kyleshu.github.io inspired) */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.52rem;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: baseline;
+  font-size: 0.915rem;
+  line-height: 1.52;
+}
+
+.news-date {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.79rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.news-text {
+  color: var(--text-body);
+}
+
+/* 8. Publications (kyleshu.github.io + yifanqiao.com hybrid) */
+.pub-filters {
+  display: inline-flex;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.filter-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.26rem 0.68rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--text-primary);
+}
+
+.filter-btn.active {
+  background: var(--bg-elevated);
+  color: var(--primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.pub-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: -0.35rem 0 1.05rem 0;
+}
+
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.pub-item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pub-item.hidden-by-filter {
+  display: none;
+}
+
+.pub-badge-col {
+  padding-top: 0.16rem;
+}
+
+.venue-badge {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 0.28rem 0.42rem;
+  border-radius: 5px;
+  background: var(--badge-bg);
+  color: var(--badge-fg);
+  border: 1px solid var(--badge-border);
+  letter-spacing: -0.01em;
+}
+
+.pub-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin: 0 0 0.24rem 0;
+}
+
+.pub-title a {
+  color: var(--text-primary);
+}
+
+.pub-title a:hover {
+  color: var(--link);
+}
+
+.pub-authors {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0 0 0.2rem 0;
+}
+
+.pub-authors .me {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+}
+
+.pub-periodical {
+  font-size: 0.865rem;
+  font-style: italic;
+  color: var(--text-body);
+  margin: 0 0 0.5rem 0;
+}
+
+.pub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.74rem;
+  font-weight: 500;
+  padding: 0.18rem 0.56rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--bg-subtle);
+  color: var(--text-body);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.pub-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+/* 9. Experience & Education Timeline Entries */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: start;
+  padding-bottom: 1.05rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.timeline-logo-wrap {
+  width: 42px;
+  height: 42px;
+  margin-top: 0.1rem;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.timeline-logo-wrap.timeline-logo-wide {
+  padding: 3px;
+}
+
+.timeline-logo-wrap.timeline-logo-compact {
+  padding: 7px;
+}
+
+[data-theme="dark"] .timeline-logo-wrap {
+  background: #f8fafc;
+  border-color: var(--border-strong);
+}
+
+.timeline-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.timeline-body {
+  min-width: 0;
+}
+
+.timeline-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.timeline-org {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.timeline-loc {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.timeline-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-role {
+  font-size: 0.895rem;
+  font-style: italic;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.timeline-date {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.timeline-bullets {
+  margin: 0.35rem 0 0 0;
+  padding-left: 1.15rem;
+}
+
+.timeline-bullets li {
+  font-size: 0.895rem;
+  line-height: 1.54;
+  margin-bottom: 0.24rem;
+  color: var(--text-body);
+}
+
+.timeline-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* Honors List */
+.honors-list {
+  margin: 0.85rem 0 0 0;
+  padding: 0.85rem 1.05rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+
+.honors-heading {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.42rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.honors-list ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.honors-list li {
+  font-size: 0.885rem;
+  margin-bottom: 0.24rem;
+  line-height: 1.5;
+}
+
+.honors-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* 10. Footer */
+.site-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* 11. Responsive Breakpoints */
+@media (max-width: 840px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 1.6rem;
+  }
+
+  .sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: center;
+    padding-bottom: 1.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .avatar-wrap {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0;
+  }
+
+  .contact-list {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.25rem;
+    padding-top: 0.85rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    padding: 0 1.05rem;
+  }
+
+  .nav-brand {
+    display: none;
+  }
+
+  .nav-inner {
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 0.85rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .sidebar {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .avatar-wrap {
+    width: 96px;
+    height: 96px;
+  }
+
+  .author-name {
+    font-size: 1.55rem;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .pub-item {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+  }
+
+  .venue-badge {
+    width: auto;
+    padding: 0.2rem 0.55rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 0.7rem;
+  }
+
+  .timeline-logo-wrap {
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    border-radius: 7px;
+  }
+
+  .timeline-logo-wrap.timeline-logo-wide {
+    padding: 2.5px;
+  }
+
+  .timeline-logo-wrap.timeline-logo-compact {
+    padding: 6px;
+  }
+}
