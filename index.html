@@ -42,7 +42,7 @@
     rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -79,11 +79,9 @@
           <nav aria-label="Primary navigation">
             <ul class="nav-links">
               <li><a href="#about" class="active">About</a></li>
-              <li><a href="#research">Research</a></li>
               <!-- <li><a href="#news">News</a></li> -->
               <li><a href="#experience">Experience</a></li>
               <li><a href="#publications">Publications</a></li>
-              <li><a href="#education">Education</a></li>
               <!-- Optional CV link: uncomment once hosting a public CV PDF -->
               <!-- <li><a href="assets/pdf/cv.pdf" target="_blank" rel="noopener">CV</a></li> -->
             </ul>
@@ -184,10 +182,10 @@
             fortunate to work with Professor <a href="https://rboutaba.cs.uwaterloo.ca/" target="_blank"
               rel="noopener">Raouf Boutaba</a> (supervisor), Professor <a href="https://mina.arashloo.net/"
               target="_blank" rel="noopener">Mina Tahmasbi Arashloo</a>, and Professor <a
-              href="https://sunbo-online.github.io/" target="_blank" rel="noopener">Bo Sun</a>. My research lies at the
-            intersection of
-            <strong>applied artificial intelligence</strong>, <strong>trustworthy decision-making under
-              constraints</strong>, and <strong>networked systems</strong>.
+              href="https://sunbo-online.github.io/" target="_blank" rel="noopener">Bo Sun</a>. My Ph.D. research lies
+            at the intersection of multi-agent decision-making, verifying learning-augmented systems, and
+            learning-driven optimization in
+            networked systems.
           </p>
           <p>
             Alongside my doctoral research, which has included an NSERC/MITACS collaboration with <strong>Rogers
@@ -198,62 +196,16 @@
           </p>
           <p>
             Prior to joining Waterloo, I received my B.Sc. in Electrical Engineering with a minor in Computer Science
-            from <a href="https://en.sharif.ir/" target="_blank" rel="noopener">Sharif University of Technology</a>,
-            where I ranked in the top 10% of my graduating cohort and was a member of Iran's National Elite Foundation.
+            from <a href="https://en.sharif.ir/" target="_blank" rel="noopener">Sharif University of Technology</a>
+            (Tehran, Iran).
           </p>
-        </section>
-
-        <!-- 2. Research Overview -->
-        <section id="research">
-          <h2>Research Overview</h2>
-          <p class="research-intro prose">
-            My work focuses on building <strong>scalable, verifiable, and generalizable learning and optimization
-              algorithms</strong> that can be safely deployed in real-world infrastructure and agentic workflows:
-          </p>
-          <div class="research-pillars">
-            <div class="pillar-card">
-              <div class="pillar-title">
-                <span>LLM-Driven Heuristic Discovery for Systems</span>
-                <span class="pillar-venues">Preprint ’26</span>
-              </div>
-              <p class="pillar-desc">
-                Studying how large language models can synthesize and evolve control policies for networked systems,
-                with a focus on mitigating search-time overfitting so discovered heuristics generalize reliably to
-                unseen operating workloads.
-              </p>
-            </div>
-            <div class="pillar-card">
-              <div class="pillar-title">
-                <span>Small Language Model Post-Training &amp; Enterprise Data Agents</span>
-                <span class="pillar-venues">NeurIPS WS ’26 · Huawei Cloud R&amp;D</span>
-              </div>
-              <p class="pillar-desc">
-                Sharpening decision boundaries of compact pointwise LLM judges via counterfactual pairwise augmentation
-                (CPA) and building context layers for enterprise
-                data agents.
-              </p>
-            </div>
-            <div class="pillar-card">
-              <div class="pillar-title">
-                <span>Multi-Agent Learning &amp; Stochastic Optimization in Wireless Systems</span>
-                <span class="pillar-venues">IEEE JSAC ’24 · IEEE NOMS ’26 · Preprint ’26</span>
-              </div>
-              <p class="pillar-desc">
-                Designing constrained multi-agent RL (CMARS), distributed graph-neural coordination (APS-GNN), and
-                bi-level stochastic optimization (HyRA) for 5G/6G Open RAN slicing and Cell-Free Massive MIMO under
-                strict SLA and latency budgets.
-              </p>
-            </div>
-            <div class="pillar-card">
-              <div class="pillar-title">
-                <span>Verifiable &amp; Reliable Reinforcement Learning for Systems</span>
-                <span class="pillar-venues">ACM SIGMETRICS ’26 · ICML WS ’23</span>
-              </div>
-              <p class="pillar-desc">
-                Formulating and decomposing relational <em>symbolic properties</em>, such as monotonicity and
-                perturbation robustness, over continuous state ranges so neural verification engines can audit deep RL
-                controllers in adaptive video streaming, congestion control, and resource allocation.
-              </p>
+          <div class="research-interests">
+            <span class="interests-label">Research Interests:</span>
+            <div class="interests-pills">
+              <span class="interest-pill">LLM-Driven Heuristic Discovery</span>
+              <span class="interest-pill">LLM Post-Training</span>
+              <span class="interest-pill">Multi-Agent Systems</span>
+              <span class="interest-pill">Formal Verification</span>
             </div>
           </div>
         </section>
@@ -337,15 +289,9 @@
                   <span class="timeline-date">Sept. 2021 – Winter 2027 (Expected)</span>
                 </div>
                 <ul class="timeline-bullets">
-                  <li>Proposed a representative evaluation harness for LLM-based heuristic discovery, mitigating
-                    search-time overfitting and achieving robust generalization across unseen workloads.</li>
-                  <li>Proposed formal verification methods for symbolic property checking across continuous input state
-                    ranges in deep RL policies.</li>
-                  <li>Proposed a constrained Multi-Agent RL resource allocation algorithm for Open RAN slicing,
-                    improving SLA satisfaction by 50%.</li>
-                  <li>Proposed a hybrid resource allocation framework combining per-slice reservation and shared
-                    pooling, achieving up to 75% spectrum savings under an optimal bi-level stochastic optimization
-                    formulation.</li>
+                  <li><strong>Research Focus:</strong> Multi-Agent Decision-Making, Verifying Learning-Augmented
+                    Systems, and Learning-Driven
+                    Optimization in Networked Systems.</li>
                 </ul>
               </div>
             </div>
@@ -390,6 +336,27 @@
                     25M riders and 1M drivers.</li>
                   <li>Designed and deployed A/B testing frameworks to evaluate marketplace pricing and dispatch product
                     features.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-logo-wrap">
+                <img class="timeline-logo" src="assets/img/logos/sharif.svg" width="30" height="30" alt=""
+                  aria-hidden="true">
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-top">
+                  <span class="timeline-org">Sharif University of Technology</span>
+                  <span class="timeline-loc">Tehran, Iran</span>
+                </div>
+                <div class="timeline-sub">
+                  <span class="timeline-role">B.Sc. in Electrical Engineering (Minor in Computer Science)</span>
+                  <span class="timeline-date">Sept. 2016 – Feb. 2021</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li><strong>GPA:</strong> 18.71 / 20 &nbsp;·&nbsp; Ranked <strong>15th among 162</strong> students in
+                    the cohort.</li>
                 </ul>
               </div>
             </div>
@@ -607,56 +574,6 @@
               </div>
             </li>
           </ol>
-        </section>
-
-        <!-- 6. Education -->
-        <section id="education">
-          <h2>Education</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-logo-wrap">
-                <img class="timeline-logo" src="assets/img/logos/uwaterloo.svg" width="30" height="30" alt=""
-                  aria-hidden="true">
-              </div>
-              <div class="timeline-body">
-                <div class="timeline-top">
-                  <span class="timeline-org">University of Waterloo</span>
-                  <span class="timeline-loc">Waterloo, ON, Canada</span>
-                </div>
-                <div class="timeline-sub">
-                  <span class="timeline-role">Direct Ph.D. in Computer Science, David R. Cheriton School of Computer
-                    Science</span>
-                  <span class="timeline-date">Sept. 2021 – Winter 2027 (Expected)</span>
-                </div>
-                <ul class="timeline-bullets">
-                  <li><strong>Advisor:</strong> Prof. Raouf Boutaba &nbsp;·&nbsp; <strong>GPA:</strong> 95.75 / 100</li>
-                  <li><strong>Research Focus:</strong> Multi-Agent Decision-Making, Verifiable RL, and Learning-Driven
-                    Optimization in Networked Systems.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-logo-wrap">
-                <img class="timeline-logo" src="assets/img/logos/sharif.svg" width="30" height="30" alt=""
-                  aria-hidden="true">
-              </div>
-              <div class="timeline-body">
-                <div class="timeline-top">
-                  <span class="timeline-org">Sharif University of Technology</span>
-                  <span class="timeline-loc">Tehran, Iran</span>
-                </div>
-                <div class="timeline-sub">
-                  <span class="timeline-role">B.Sc. in Electrical Engineering (Minor in Computer Science)</span>
-                  <span class="timeline-date">Sept. 2016 – Feb. 2021</span>
-                </div>
-                <ul class="timeline-bullets">
-                  <li><strong>GPA:</strong> 18.71 / 20 &nbsp;·&nbsp; Ranked <strong>15th among 162</strong> students in
-                    the cohort.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </section>
 
         <footer class="site-footer">
