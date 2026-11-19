@@ -42,7 +42,7 @@
     rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -82,8 +82,7 @@
               <!-- <li><a href="#news">News</a></li> -->
               <li><a href="#experience">Experience</a></li>
               <li><a href="#publications">Publications</a></li>
-              <!-- Optional CV link: uncomment once hosting a public CV PDF -->
-              <!-- <li><a href="assets/pdf/cv.pdf" target="_blank" rel="noopener">CV</a></li> -->
+              <li><a href="assets/pdf/cv.pdf?v=2" target="_blank" rel="noopener">CV</a></li>
             </ul>
           </nav>
           <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false"
@@ -143,6 +142,17 @@
             </button>
           </li>
           <li>
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <line x1="10" y1="9" x2="8" y2="9"></line>
+            </svg>
+            <a href="assets/pdf/cv.pdf?v=2" target="_blank" rel="noopener">CV (PDF)</a>
+          </li>
+          <li>
             <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path
                 d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z">
@@ -183,7 +193,8 @@
               rel="noopener">Raouf Boutaba</a> (supervisor), Professor <a href="https://mina.arashloo.net/"
               target="_blank" rel="noopener">Mina Tahmasbi Arashloo</a>, and Professor <a
               href="https://sunbo-online.github.io/" target="_blank" rel="noopener">Bo Sun</a>. My Ph.D. research lies
-            at the intersection of reinforcement learning, multi-agent decision-making, verifying learning-augmented systems, and
+            at the intersection of reinforcement learning, multi-agent decision-making, verifying learning-augmented
+            systems, and
             AI-driven optimization in
             networked systems.
           </p>
@@ -267,10 +278,6 @@
                   <span class="timeline-role">Research Intern (Applied AI)</span>
                   <span class="timeline-date">May 2026 – Dec. 2026</span>
                 </div>
-                <ul class="timeline-bullets">
-                  <li>Proposed judge LLM fine-tuning with counterfactual pairwise augmentation, outperforming
-                    multi-expert model merging across evaluation criteria.</li>
-                </ul>
               </div>
             </div>
 
@@ -288,11 +295,6 @@
                   <span class="timeline-role">Ph.D. Candidate (NSERC/MITACS/Rogers Comm.)</span>
                   <span class="timeline-date">Sept. 2021 – Winter 2027 (Expected)</span>
                 </div>
-                <ul class="timeline-bullets">
-                  <li><strong>Research Focus:</strong> Multi-Agent Decision-Making, Verifying Learning-Augmented
-                    Systems, and Learning-Driven
-                    Optimization in Networked Systems.</li>
-                </ul>
               </div>
             </div>
 
@@ -307,13 +309,9 @@
                   <span class="timeline-loc">Paris, France</span>
                 </div>
                 <div class="timeline-sub">
-                  <span class="timeline-role">Research Intern</span>
+                  <span class="timeline-role">Research Intern (Applied AI)</span>
                   <span class="timeline-date">Oct. 2024 – Sept. 2025</span>
                 </div>
-                <ul class="timeline-bullets">
-                  <li>Proposed a Graph Neural Network (GNN)-based multi-agent RL framework for distributed wireless
-                    connectivity management, improving SLA satisfaction by 40%.</li>
-                </ul>
               </div>
             </div>
 
@@ -331,12 +329,6 @@
                   <span class="timeline-role">Data Analyst (Pricing, Mapping, and Dispatch Systems)</span>
                   <span class="timeline-date">Feb. 2021 – Sept. 2021</span>
                 </div>
-                <ul class="timeline-bullets">
-                  <li>Developed large-scale Apache Spark data pipelines to analyze rider and driver experience across
-                    25M riders and 1M drivers.</li>
-                  <li>Designed and deployed A/B testing frameworks to evaluate marketplace pricing and dispatch product
-                    features.</li>
-                </ul>
               </div>
             </div>
 
@@ -354,10 +346,6 @@
                   <span class="timeline-role">B.Sc. in Electrical Engineering (Minor in Computer Science)</span>
                   <span class="timeline-date">Sept. 2016 – Feb. 2021</span>
                 </div>
-                <ul class="timeline-bullets">
-                  <li><strong>GPA:</strong> 18.71 / 20 &nbsp;·&nbsp; Ranked <strong>15th among 162</strong> students in
-                    the cohort.</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -381,9 +369,6 @@
           <ol class="pub-list">
             <!-- Pub 1: CPA NeurIPS Workshop '26 -->
             <li class="pub-item" data-first-author="true">
-              <div class="pub-badge-col">
-                <span class="venue-badge">NeurIPS WS ’26</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://arxiv.org/abs/2610.41149" target="_blank" rel="noopener">Counterfactual Pairwise
@@ -401,9 +386,6 @@
 
             <!-- Pub 2: diffRL SIGMETRICS '26 -->
             <li class="pub-item" data-first-author="true">
-              <div class="pub-badge-col">
-                <span class="venue-badge">ACM SIGMETRICS ’26</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://doi.org/10.1145/3805627" target="_blank" rel="noopener">Analyzing Symbolic Properties
@@ -423,9 +405,6 @@
 
             <!-- Pub 3: HyRA IEEE NOMS '26 -->
             <li class="pub-item" data-first-author="true">
-              <div class="pub-badge-col">
-                <span class="venue-badge">IEEE NOMS ’26</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://ieeexplore.ieee.org/abstract/document/11668346" target="_blank" rel="noopener">HyRA:
@@ -447,9 +426,6 @@
 
             <!-- Pub 4: APS-GNN Preprint '26 -->
             <li class="pub-item" data-first-author="true">
-              <div class="pub-badge-col">
-                <span class="venue-badge">Preprint ’26</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://arxiv.org/abs/2602.17954" target="_blank" rel="noopener">Graph-Neural Multi-Agent
@@ -468,9 +444,6 @@
 
             <!-- Pub 5: CMARS IEEE JSAC '24 -->
             <li class="pub-item" data-first-author="true">
-              <div class="pub-badge-col">
-                <span class="venue-badge">IEEE JSAC ’24</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://ieeexplore.ieee.org/document/10329913" target="_blank" rel="noopener">Flexible RAN
@@ -491,9 +464,6 @@
 
             <!-- Pub 6: 5G SA Testbeds IEEE NOMS '24 (Co-authored) -->
             <li class="pub-item" data-first-author="false">
-              <div class="pub-badge-col">
-                <span class="venue-badge">IEEE NOMS ’24</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://doi.org/10.1109/NOMS59830.2024.10575687" target="_blank" rel="noopener">Evaluating
@@ -512,9 +482,6 @@
 
             <!-- Pub 7: ICML Workshop '23 -->
             <li class="pub-item" data-first-author="true">
-              <div class="pub-badge-col">
-                <span class="venue-badge">ICML WS ’23</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://files.sri.inf.ethz.ch/wfvml23/papers/paper_20.pdf" target="_blank"
@@ -534,9 +501,6 @@
 
             <!-- Pub 8: RL for RRM Survey CommMag '23 -->
             <li class="pub-item" data-first-author="true">
-              <div class="pub-badge-col">
-                <span class="venue-badge">CommMag ’23</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://ieeexplore.ieee.org/abstract/document/10004901" target="_blank"
@@ -555,9 +519,6 @@
 
             <!-- Pub 9: Slice Scaling Survey CommMag '23 (Co-authored) -->
             <li class="pub-item" data-first-author="false">
-              <div class="pub-badge-col">
-                <span class="venue-badge">CommMag ’23</span>
-              </div>
               <div class="pub-body">
                 <h3 class="pub-title">
                   <a href="https://doi.org/10.1109/MCOM.006.2200534" target="_blank" rel="noopener">Deep Reinforcement
